@@ -1,0 +1,24 @@
+{
+    "name": "craigwoodlandow/laravel-barcode-generator",
+    "description": "A package to generate barcodes for Laravel",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Craig Woodland",
+            "email": "craig.woodland@live.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CraigWoodlandOW\\LaravelBarcodeGenerator\\": "src/"
+        }
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CraigWoodlandOW\\LaravelBarcodeGenerator\\BarcodeServiceProvider"
+            ]
+        }
+    }
+}
