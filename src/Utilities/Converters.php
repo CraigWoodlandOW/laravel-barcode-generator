@@ -22,7 +22,7 @@ use CraigWoodlandOW\LaravelBarcodeGenerator\Utilities\Validators;
 
 class Converters
 {
-    function convert_upce_to_upca($upc)
+    public static function convert_upce_to_upca($upc)
     {
         if (!isset($upc)||!is_numeric($upc)) {
             return false;
@@ -98,7 +98,13 @@ class Converters
         return $upce;
     }
 
-    public static function convert_upca_to_ean13($upc) {
+    public static function convert_upce_to_ean13($upc)
+    {
+        return Converters::convert_upca_to_ean13(Converters::convert_upce_to_upca($upc));
+    }
+
+    public static function convert_upca_to_ean13($upc)
+    {
         if(!isset($upc) || !is_numeric($upc)) {
             return false;
         }
