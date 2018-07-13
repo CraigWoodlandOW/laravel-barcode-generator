@@ -17,14 +17,14 @@ class BarcodeController extends Controller
             $generated = $barcode->create($value);
 
             if(!$generated) {
-                $this->error('Barcode Not Generated');
+                $this->error('Barcode Unavailable');
             }
         } elseif($type == 'ean13') {
             $barcode = new ean13;
             $generated = $barcode->create($value);
 
             if(!$generated) {
-                $this->error('Barcode Not Generated');
+                $this->error('Barcode Unavailable');
             }
         } else {
             $this->error('Invalid Barcode Type');
