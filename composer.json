@@ -1,5 +1,5 @@
 {
-    "name": "craigwoodlandow/laravel-barcode-generator",
+    "name": "towc19/laravel-barcode-generator",
     "description": "A package to generate barcodes for Laravel",
     "type": "library",
     "authors": [
